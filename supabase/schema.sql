@@ -41,6 +41,7 @@ create table if not exists private.admin (
 -- ---------------------------------------------------------------- acesso
 alter table public.presentations enable row level security;
 alter table public.ratings       enable row level security;
+alter table private.admin        enable row level security;
 
 drop policy if exists "leitura publica" on public.presentations;
 create policy "leitura publica" on public.presentations for select to anon, authenticated using (true);
