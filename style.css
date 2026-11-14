@@ -13,7 +13,7 @@
   --shadow: 0 1px 0 rgba(31, 27, 22, .04), 0 8px 24px -12px rgba(31, 27, 22, .18);
   --radius: 14px;
   --display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --body: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
