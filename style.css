@@ -13,7 +13,7 @@
   --shadow: 0 1px 0 rgba(31, 27, 22, .04), 0 8px 24px -12px rgba(31, 27, 22, .18);
   --radius: 14px;
   --display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -74,9 +74,8 @@ code { font-size: .9em; background: var(--accent-soft); padding: .1em .35em; bor
   display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; font-weight: 600;
   text-transform: uppercase; letter-spacing: .06em; color: var(--accent); margin-bottom: 8px;
 }
-.tag.live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s infinite; }
+.tag.live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 .tag.closed { color: var(--muted); }
-@keyframes pulse { 50% { opacity: .25; } }
 
 .crit { border: 0; padding: 0; margin: 20px 0 0; }
 .crit legend { font-weight: 600; padding: 0; }
@@ -139,7 +138,7 @@ input:focus, textarea:focus { outline: none; border-color: var(--accent); }
 .bars { display: grid; grid-template-columns: max-content 1fr 2.5em; gap: 6px 10px; align-items: center; margin-top: 14px; font-size: .88rem; }
 .bars .t { color: var(--muted); }
 .bars .track { height: 8px; border-radius: 99px; background: var(--line); overflow: hidden; }
-.bars .fill { height: 100%; background: var(--bar); border-radius: 99px; transition: width .5s ease; }
+.bars .fill { display: block; height: 100%; background: var(--bar); border-radius: 99px; transform-origin: left; transition: transform .5s ease; }
 .bars .v { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
 details.comments { margin-top: 14px; }
 details.comments summary { cursor: pointer; color: var(--muted); font-size: .9rem; }

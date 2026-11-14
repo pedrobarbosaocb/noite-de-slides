@@ -31,7 +31,7 @@ function render(rows) {
     const bars = CRITERIA.map(c => {
       const v = p.byCrit[c.key];
       return `<span class="t">${esc(c.label)}</span>
-        <span class="track"><span class="fill" style="width:${v ? (v / 5) * 100 : 0}%"></span></span>
+        <span class="track"><span class="fill" style="transform:scaleX(${v ? v / 5 : 0})"></span></span>
         <span class="v">${fmt(v)}</span>`;
     }).join("");
     const comments = p.comments.length ? `<details class="comments" data-id="${p.id}" ${openDetails.has(p.id) ? "open" : ""}>
